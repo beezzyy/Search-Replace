@@ -1,0 +1,25 @@
+{
+    "C_Cpp.errorSquiggles": "Disabled",
+    "files.associations": {
+        "stdio.h": "c",
+        "dirent.h": "c",
+        "unistd.h": "c",
+        "types.h": "c",
+        "traversal.h": "c",
+        "text.h": "c",
+        "ctype.h": "c",
+        "cctype": "c",
+        "cmath": "c",
+        "compare": "c",
+        "concepts": "c",
+        "cstdarg": "c",
+        "cstdio": "c",
+        "cstdlib": "c",
+        "type_traits": "c",
+        "limits": "c",
+        "new": "c",
+        "*.tcc": "c",
+        "cstdint": "c",
+        "typeinfo": "c"
+    }
+}

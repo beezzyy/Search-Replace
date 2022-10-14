@@ -1,0 +1,21 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "build replace",
+            "type": "shell",
+            "command": "gcc",
+            "args": [
+                "-Wall",
+                "traversal.c",
+                "text.c",
+                "report.c",
+                "replace.c",
+                "-o",
+                "replace.exe",
+                "-g"
+            ],
+            "group": "build"
+        },
+    ]
+}
