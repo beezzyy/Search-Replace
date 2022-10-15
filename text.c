@@ -13,12 +13,12 @@ void replace(char *line, char *oldWord, char *newWord);
 
 char *upper_case(char str[])
 {
-    char *newStr = str;
+    char *newString = str;
     for (int i = 0; i < strlen(str); i++)
     {
-        newStr[i] = toupper(str[i]);
+        newString[i] = toupper(str[i]);
     }
-    return newStr;
+    return newString;
 }
 
 void read_file(char *file_name, char *argumentWord)

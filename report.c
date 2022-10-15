@@ -14,9 +14,9 @@ void print_report(char *arg, char *dirname)
     print_sorted_data();
 }
 
-int sort_string(const void *str1, const void *str2)
+int sort_string(const void *string1, const void *string2)
 {
-    char *const *pp1 = str1;
-    char *const *pp2 = str2;
-    return strcmp(*pp2, *pp1);
+    char *const *p1 = string1;
+    char *const *p2 = string2;
+    return strcmp(*p2, *p1);
 }
