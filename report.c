@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <stdlib.h>
 #include <ctype.h>
 #include <string.h>
 #include "text.h"
@@ -16,7 +17,5 @@ void print_report(char *arg, char *dirname)
 
 int sort_string(const void *string1, const void *string2)
 {
-    char *const *p1 = string1;
-    char *const *p2 = string2;
-    return strcmp(*p2, *p1);
+    return atoi(*(const char **)string2) - atoi(*(const char **)string1);
 }
