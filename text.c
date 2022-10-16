@@ -30,6 +30,7 @@ void read_file(char *file_name, char *argumentWord)
     char text[1000];
     char arg[50] = "";
     char *charCount;
+    count = 0;
 
     strcpy(arg, argumentWord);
 
@@ -88,7 +89,6 @@ void replace(char *line, char *argWord, char *upperCaseWord)
     char *position, temp[SIZE];
     int index = 0;
     int wordLength;
-    count = 0;
     wordLength = strlen(argWord);
 
     while ((position = strstr(line, argWord)) != NULL)
