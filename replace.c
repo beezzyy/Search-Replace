@@ -18,7 +18,7 @@ int main(int argc, char **argv)
     strcpy(arg, argv[1]);
     char *dirname = ".";
     traversing_files(dirname, arg);
-    print_report(arg, dirname);
+    print_report(arg);
 
     return 0;
 }

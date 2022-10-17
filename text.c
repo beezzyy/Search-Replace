@@ -7,7 +7,7 @@
 #define SIZE 1000
 int count;
 int i = 0;
-char *copy[100];
+char *dataArray[100];
 
 void replace(char *line, char *oldWord, char *newWord);
 
@@ -60,7 +60,7 @@ void read_file(char *file_name, char *argumentWord)
     strcat(charCount, file_name);
     strcat(charCount, "\n");
 
-    copy[i] = charCount;
+    dataArray[i] = charCount;
     i++;
 
     fclose(fp);
@@ -74,13 +74,13 @@ void print_data()
 {
     for (int j = 0; j < i; j++)
     {
-        printf("%s", copy[j]);
+        printf("%s", dataArray[j]);
     }
 }
 
 void print_sorted_data()
 {
-    qsort(copy, i, sizeof(char *), sort_string);
+    qsort(dataArray, i, sizeof(char *), sort_string);
     print_data();
 }
 
