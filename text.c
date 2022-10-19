@@ -40,7 +40,7 @@ void read_file(char *file_name, char *argumentWord)
     if (fp1 == NULL || fp == NULL)
     {
         printf("Error opening file!\n");
-        return;
+        exit(1);
     }
 
     while ((fgets(text, SIZE, fp)) != NULL)
