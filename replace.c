@@ -10,8 +10,8 @@ int main(int argc, char **argv)
 {
     if (argc < 2)
     {
-        printf("Argument not found. Please try again\n");
-        exit(0);
+        printf("Argument not found. Please try again!\n");
+        exit(1);
     }
 
     char arg[strlen(argv[1])];
