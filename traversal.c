@@ -7,12 +7,18 @@
 #include "text.h"
 #include "report.h"
 
+/*
+This function iterates every .txt files in every directories
+*/
 void traversing_files(char *dirname, char *arg)
 {
     DIR *directory = opendir(dirname);
 
+    // check if directory is found
     if (directory == NULL)
     {
+        printf("Directory not found");
+        exit(1);
         return;
     }
     struct dirent *dir = NULL;
@@ -20,7 +26,7 @@ void traversing_files(char *dirname, char *arg)
 
     while (dir != NULL)
     {
-
+        // verifies if it's .txt file
         if (dir->d_type == DT_REG && strncmp(dir->d_name + strlen(dir->d_name) - 4, ".txt", 4) == 0)
         {
 
@@ -31,7 +37,7 @@ void traversing_files(char *dirname, char *arg)
 
             read_file(path, arg);
         }
-
+        // Goes through all directories except for the . and ..
         if (dir->d_type == DT_DIR && strcmp(dir->d_name, ".") != 0 && strcmp(dir->d_name, "..") != 0)
         {
             char path[100] = {0};
