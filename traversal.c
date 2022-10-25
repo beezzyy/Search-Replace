@@ -4,6 +4,7 @@
 #include <dirent.h>
 #include <unistd.h>
 #include <sys/types.h>
+#include <stdlib.h>
 #include "text.h"
 #include "report.h"
 
