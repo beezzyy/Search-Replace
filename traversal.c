@@ -18,7 +18,7 @@ void traversing_files(char *dirname, char *arg)
     // check if directory is found
     if (directory == NULL)
     {
-        printf("Directory not found");
+        printf("Directory not found!\n");
         exit(1);
         return;
     }
