@@ -39,7 +39,7 @@ void read_file(char *file_name, char *argumentWord)
 
     if (fp1 == NULL || fp == NULL)
     {
-        printf("Error opening file!\n");
+        fprintf(stderr, "Error opening file!\n");
         exit(1);
     }
 
