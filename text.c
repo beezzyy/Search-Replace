@@ -54,6 +54,12 @@ void read_file(char *file_name, char *argumentWord)
 
     charCount = (char *)malloc(sizeof(char) * 100);
 
+    if (charCount == NULL)
+    {
+        fprintf(stderr, "Error: Out of memory!\n");
+        exit(1);
+    }
+
     sprintf(charCount, "%d", count);
 
     strcat(charCount, "\t");
@@ -70,18 +76,14 @@ void read_file(char *file_name, char *argumentWord)
     rename("temp.txt", file_name);
 }
 
-void print_data()
+void print_sorted_data()
 {
+    qsort(dataArray, i, sizeof(char *), sort_string);
+
     for (int j = 0; j < i; j++)
     {
         printf("%s", dataArray[j]);
     }
-}
-
-void print_sorted_data()
-{
-    qsort(dataArray, i, sizeof(char *), sort_string);
-    print_data();
 }
 
 void replace(char *line, char *argWord, char *upperCaseWord)
